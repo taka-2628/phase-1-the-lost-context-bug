@@ -24,7 +24,7 @@ printCard.call(messageConfig);
 
 // LOG: Happy Birthday, Odin One-Eye!
 // LOG: From Asgard to Nifelheim, you're the best all-father ever. Love,
-//Uncaught TypeError: Cannot read properties of undefined (reading 'Thor')
+// Uncaught TypeError: Cannot read properties of undefined (reading 'Thor')
 //    at index.js:18
 //    at Array.forEach (<anonymous>)
 //    at Object.printCard (index.js:17)
