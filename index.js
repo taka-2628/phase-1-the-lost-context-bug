@@ -21,3 +21,26 @@ const printCard = function (messageConfig) {
 };
 
 printCard(messageConfig);
+
+// LOG: Happy Birthday, Odin One-Eye!
+// LOG: From Asgard to Nifelheim, you're the best all-father ever. Love,
+// LOG: Admiration, respect, and love, Thor
+// LOG: Your son, Loki
+
+
+
+
+
+
+
+
+/*
+const printCard = function () {
+  console.log(this.frontContent);
+  console.log(this.insideContent);
+  this.signatories.forEach(function (signatory) {
+    const message = `${this.closing[signatory]}, ${signatory}`;
+    console.log(message);
+  });
+};
+*/
