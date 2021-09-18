@@ -11,14 +11,13 @@ const messageConfig = {
   ]
 };
 
-const printCard = function () {
-  console.log(this.frontContent);
-  console.log(this.insideContent);
-  this.signatories.forEach(function (signatory) {
-    const message = `${this.closing[signatory]}, ${signatory}`;
+const printCard = function (messageConfig) {
+  console.log(messageConfig.frontContent);
+  console.log(messageConfig.insideContent);
+  messageConfig.signatories.forEach(function (signatory) {
+    const message = `${messageConfig.closing[signatory]}, ${signatory}`;
     console.log(message);
   });
 };
 
-printCard.call(messageConfig);
-
+printCard(messageConfig);
