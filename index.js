@@ -14,22 +14,48 @@ const messageConfig = {
 const printCard = function () {
   console.log(this.frontContent);
   console.log(this.insideContent);
+  this.signatories.forEach(function (signatory) {
+    const message = `${this.closing[signatory]}, ${signatory}`;
+    console.log(message);
+  },
+  this);
+};
 
-  console.log("Debug Before forEach: " + this)
+printCard.call(messageConfig);
+
+
+// WITH THIS - DEBUG
+/*
+const printCard = function () {
+  console.log(this.frontContent);
+  console.log(this.insideContent);
+
+  console.log("Debug Before forEach: " + this);
   this.signatories.forEach(function (signatory) {
     console.log("Debug Inside: " + this);
     // const message = `${this.closing[signatory]}, ${signatory}`;
     // console.log(message);
-  });
+  })
 };
-
-printCard.call(messageConfig);
 
 // LOG: Happy Birthday, Odin One-Eye!
 // LOG: From Asgard to Nifelheim, you're the best all-father ever. Love,
 // LOG: Debug Before forEach: [object Object]
 // LOG: Debug Inside: [object Window]
 // LOG: Debug Inside: [object Window]
+*/
+
+
+// WITH THIS - ERROR
+/*
+const printCard = function () {
+  console.log(this.frontContent);
+  console.log(this.insideContent);
+  this.signatories.forEach(function (signatory) {
+    const message = `${this.closing[signatory]}, ${signatory}`;
+    console.log(message);
+  })
+};
 
 // LOG: Happy Birthday, Odin One-Eye!
 // LOG: From Asgard to Nifelheim, you're the best all-father ever. Love,
@@ -38,7 +64,10 @@ printCard.call(messageConfig);
 //    at Array.forEach (<anonymous>)
 //    at Object.printCard (index.js:17)
 //    at index.js:23
+*/
 
+
+// WITHOUT THIS
 /*
 const printCard = function (messageConfig) {
   console.log(messageConfig.frontContent);
