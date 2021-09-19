@@ -11,6 +11,7 @@ const messageConfig = {
   ]
 };
 
+// WITH THIS - SOLUTION 3
 const printCard = function () {
   console.log(this.frontContent);
   console.log(this.insideContent);
