@@ -14,13 +14,22 @@ const messageConfig = {
 const printCard = function () {
   console.log(this.frontContent);
   console.log(this.insideContent);
+
+  console.log("Debug Before forEach: " + this)
   this.signatories.forEach(function (signatory) {
-    const message = `${this.closing[signatory]}, ${signatory}`;
-    console.log(message);
+    console.log("Debug Inside: " + this);
+    // const message = `${this.closing[signatory]}, ${signatory}`;
+    // console.log(message);
   });
 };
 
 printCard.call(messageConfig);
+
+// LOG: Happy Birthday, Odin One-Eye!
+// LOG: From Asgard to Nifelheim, you're the best all-father ever. Love,
+// LOG: Debug Before forEach: [object Object]
+// LOG: Debug Inside: [object Window]
+// LOG: Debug Inside: [object Window]
 
 // LOG: Happy Birthday, Odin One-Eye!
 // LOG: From Asgard to Nifelheim, you're the best all-father ever. Love,
