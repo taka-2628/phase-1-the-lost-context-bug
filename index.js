@@ -14,6 +14,26 @@ const messageConfig = {
 const printCard = function () {
   console.log(this.frontContent);
   console.log(this.insideContent);
+  this.signatories.forEach(signatory => {
+    const message = `${this.closing[signatory]}, ${signatory}`;
+    console.log(message);
+  })
+};
+
+printCard.call(messageConfig);
+
+// LOG: Happy Birthday, Odin One-Eye!
+// LOG: From Asgard to Nifelheim, you're the best all-father ever. Love,
+// LOG: Admiration, respect, and love, Thor
+// LOG: Your son, Loki
+
+
+
+// WITH THIS - SOLUTION 2
+/*
+const printCard = function () {
+  console.log(this.frontContent);
+  console.log(this.insideContent);
 
   const outerContext = this;
 
@@ -29,7 +49,7 @@ printCard.call(messageConfig);
 // LOG: From Asgard to Nifelheim, you're the best all-father ever. Love,
 // LOG: Admiration, respect, and love, Thor
 // LOG: Your son, Loki
-
+*/
 
 
 // WITH THIS - SOLUTION 1.2
