@@ -23,6 +23,11 @@ const printCard = function () {
 
 printCard.call(messageConfig);
 
+// LOG: Happy Birthday, Odin One-Eye!
+// LOG: From Asgard to Nifelheim, you're the best all-father ever. Love,
+// LOG: Admiration, respect, and love, Thor
+// LOG: Your son, Loki
+
 
 // WITH THIS - DEBUG
 /*
